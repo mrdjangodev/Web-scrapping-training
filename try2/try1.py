@@ -26,8 +26,22 @@ with open("try2/index2.html", 'r') as f:
 # tags = doc.find_all(class_="btn-item")
 # print(tags)
 
-# Find regular expressions
-tags = doc.find_all(text=re.compile("\$.*"))
-print(tags)
+# # Find regular expressions
+# tags = doc.find_all(text=re.compile("\$.*"))
+# print(tags)
+# for tag in tags:
+#     print(tag.strip())
+
+# # Find limits
+# tags = doc.find_all(text=re.compile("\$.*"), limit=1)
+# for tag in tags:
+#     print(tag.strip())
+
+
+# Save modified HTML
+tags = doc.find_all("input", type="text")
 for tag in tags:
-    print(tag.strip())
+    tag['placeholder'] = "Placeholder changed" 
+
+with open("modified.html", 'w') as file:
+    file.write(str(doc))
