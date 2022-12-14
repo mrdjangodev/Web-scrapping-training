@@ -3,6 +3,6 @@
 3. [X] Find multiple tags
 4. [X] Find attributes
 5. [X] Find class names
-6. [ ] Find regular expressions
+6. [X] Find regular expressions
 7. [ ] Find limits
 8. [ ] Save modified HTML

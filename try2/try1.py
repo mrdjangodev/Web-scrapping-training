@@ -1,4 +1,6 @@
 from bs4 import BeautifulSoup
+import re  # regular expression
+
 
 with open("try2/index2.html", 'r') as f:
     doc = BeautifulSoup(f, 'html.parser')
@@ -20,7 +22,12 @@ with open("try2/index2.html", 'r') as f:
 # tags = doc.find_all('option', text="Undergraduate")
 # print(tags)
 
+# # Find class names
+# tags = doc.find_all(class_="btn-item")
+# print(tags)
 
-# Find class names
-tags = doc.find_all(class_="btn-item")
+# Find regular expressions
+tags = doc.find_all(text=re.compile("\$.*"))
 print(tags)
+for tag in tags:
+    print(tag.strip())
