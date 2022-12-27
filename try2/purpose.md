@@ -5,4 +5,4 @@
 5. [X] Find class names
 6. [X] Find regular expressions
 7. [X] Find limits
-8. [ ] Save modified HTML
+8. [X] Save modified HTML

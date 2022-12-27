@@ -39,9 +39,9 @@ with open("try2/index2.html", 'r') as f:
 
 
 # Save modified HTML
-tags = doc.find_all("input", type="text")
-for tag in tags:
-    tag['placeholder'] = "Placeholder changed" 
+# tags = doc.find_all("input", type="text")
+# for tag in tags:
+#     tag['placeholder'] = "Placeholder changed" 
 
-with open("modified.html", 'w') as file:
-    file.write(str(doc))
+# with open("modified.html", 'w') as file:
+#     file.write(str(doc))
